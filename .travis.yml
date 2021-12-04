@@ -7,6 +7,9 @@ before_install:
   - automake --version
   - autoconf --version
   - libtool --version
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update;
+        brew upgrade automake || true; brew upgrade libtool || true;
+      fi
   - (rm -rf htslib && wget https://github.com/samtools/htslib/archive/1.4.zip && unzip 1.4.zip && mv htslib-1.4/ htslib && cd htslib && autoheader && autoconf && ./configure && make && sudo make install && cp Makefile Makefile.in) #make install might not be needed
 install:
   - sudo ln -s /usr/share/aclocal   /usr/local/share/aclocal
