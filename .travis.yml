@@ -1,0 +1,14 @@
+os: linux
+language: cpp
+compiler: 
+  - gcc
+  - clang
+jobs:
+  include:
+   - os: linux
+     arch: ppc64le
+   - os: linux
+     arch: s390x
+     compiler: gcc
+      
+script: chmod u+x ./install-sh.sh && ./Itmain.sh
