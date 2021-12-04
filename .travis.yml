@@ -14,5 +14,5 @@ install:
   - autoheader
   - autoreconf
 script: 
-  - ./configure
+  - ./configure.ac
   - make
