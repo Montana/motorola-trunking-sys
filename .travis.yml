@@ -8,10 +8,11 @@ before_install:
   - automake --version
   - autoconf --version
   - libtool --version
-  - (rm -rf htslib && wget https://github.com/samtools/htslib/archive/1.4.zip && unzip 1.4.zip && mv htslib-1.4/ htslib && cd htslib && autoheader && autoconf && ./configure && make && sudo make install && cp Makefile Makefile.in) #make install might not be needed
-install:
+  - (rm -rf htslib && wget https://github.com/samtools/htslib/archive/1.4.zip && unzip 1.4.zip && mv htslib-1.4/ htslib && cd htslib && autoheader && autoconf && ./configure && make && sudo make install && cp Makefile Makefile.in)
   - sudo ln -s /usr/share/aclocal   /usr/local/share/aclocal
   - autoheader
   - autoreconf
 script: 
   - chmod u+x ./configure
+
+# .travis.yml file by Montana Mendy for this repo (motorola-trunking-sys)
