@@ -1,6 +1,3 @@
 os: linux
-language: cpp
-compiler: 
-  - gcc
-  - clang
+language: generic
 script: chmod u+x ./install.sh && ./Itmain.sh
