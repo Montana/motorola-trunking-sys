@@ -15,4 +15,3 @@ install:
   - autoreconf
 script: 
   - chmod u+x ./configure
-  - make
